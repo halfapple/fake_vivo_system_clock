@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="bg_color" format="color"/>
+    <attr name="marker_margin" format="dimension"/>
+    <attr name="marker_length" format="dimension"/>
+    <attr name="marker_color1" format="color"/>
+    <attr name="marker_color2" format="color"/>
+    <attr name="hourColor" format="color"/>
+    <attr name="hourHandWidth" format="dimension"/>
+    <attr name="minColor" format="color"/>
+    <attr name="minHandWidth" format="dimension"/>
+    <attr name="secHandWidth" format="dimension"/>
+    <attr name="secColor" format="color"/>
+    <attr name="centerCircleR1" format="dimension"/>
+    <attr name="centerCircleR2" format="dimension"/>
+
+    <declare-styleable name="VivoClockView">
+        <attr name="bg_color"/>
+        <attr name="marker_margin"/>
+        <attr name="marker_length"/>
+        <attr name="marker_color1"/>
+        <attr name="marker_color2"/>
+        <attr name="hourColor"/>
+        <attr name="hourHandWidth"/>
+        <attr name="minColor"/>
+        <attr name="minHandWidth"/>
+        <attr name="secHandWidth"/>
+        <attr name="secColor"/>
+        <attr name="centerCircleR1"/>
+        <attr name="centerCircleR2"/>
+    </declare-styleable>
+</resources>

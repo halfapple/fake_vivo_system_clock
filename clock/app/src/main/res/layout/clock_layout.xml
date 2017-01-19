@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.app.clock.VivoClockView
+        android:id="@+id/vivo_clock_view"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        app:bg_color="#000000"
+        app:marker_margin="5dp"
+        app:marker_length="10dp"
+        app:hourColor="#ffffff"
+        app:hourHandWidth="4dp"
+        app:minColor="#ffffff"
+        app:minHandWidth="3dp"
+        app:secColor="#ff7f50"
+        app:secHandWidth="1dp"
+        app:centerCircleR1="3dp"
+        app:centerCircleR2="6dp">
+
+    </com.app.clock.VivoClockView>
+
+    <TextView
+        android:id="@+id/current_time"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18:45:50"/>
+
+</LinearLayout>
