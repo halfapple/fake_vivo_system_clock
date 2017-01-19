@@ -18,6 +18,10 @@ public class ClockActivity extends AppCompatActivity {
     private Calendar now;
     private StringBuilder sb = new StringBuilder();
 
+    private int hour;
+    private int min;
+    private int sec;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,25 +31,26 @@ public class ClockActivity extends AppCompatActivity {
         clockView = (VivoClockView)findViewById(R.id.vivo_clock_view);
         mTimeTv = (TextView)findViewById(R.id.current_time);
 
-
-
         Handler handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
 
                 switch (msg.what) {
                     case 0:
+
                         now = Calendar.getInstance();
-                        clockView.setTime(now.get(Calendar.HOUR),
-                                now.get(Calendar.MINUTE),
-                                now.get(Calendar.SECOND));
+                        hour = now.get(Calendar.HOUR);
+                        min = now.get(Calendar.MINUTE);
+                        sec = now.get(Calendar.SECOND);
+
+                        clockView.setTime(hour, min, sec);
 
                         sb.delete(0, sb.length());
-                        sb.append(now.get(Calendar.HOUR_OF_DAY))
+                        sb.append(hour)
                                 .append(":")
-                                .append(now.get(Calendar.MINUTE))
+                                .append(min)
                                 .append(":")
-                                .append(now.get(Calendar.SECOND));
+                                .append(sec);
                         mTimeTv.setText(sb.toString());
 
                         sendEmptyMessageDelayed(0, 1000);
